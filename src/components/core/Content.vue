@@ -12,7 +12,29 @@
     <a-button type="dashed">Dashed Button</a-button>
     <a-button type="text">Text Button</a-button>
     <a-button type="link">Link Button</a-button>
+    <br>
+
+
+  <a-row>
+    <a-col :span="12">col-12</a-col>
+    <a-col :span="12">col-12</a-col>
+  </a-row>
+  <a-row>
+    <a-col :span="8">col-8</a-col>
+    <a-col :span="8">col-8</a-col>
+    <a-col :span="8">col-8</a-col>
+  </a-row>
+  <a-row>
+    <a-col :span="6">col-6</a-col>
+    <a-col :span="6">col-6</a-col>
+    <a-col :span="6">col-6</a-col>
+    <a-col :span="6">col-6</a-col>
+  </a-row>
+
+
+
   </a-layout-content>
+
 </template>
 
 <script lang="ts">
@@ -24,3 +46,8 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+  a-col{
+    background:#f3f;
+  }
+</style>

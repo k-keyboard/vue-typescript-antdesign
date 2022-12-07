@@ -1,7 +1,7 @@
 <template>
   <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
     <div class="logo" />
-    <a-button @click="collapsed = !collapsed">X</a-button>
+    <a-button block @click="toggleCollapse">X</a-button>
     <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
       <a-menu-item key="1">
         <user-outlined />
@@ -21,9 +21,20 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import {
+  UserOutlined,
+  VideoCameraOutlined,
+  UploadOutlined,
+} from "@ant-design/icons-vue";
+
 
 export default defineComponent({
   props: ["collapsed"],
+  components: {
+    UserOutlined,
+    VideoCameraOutlined,
+    UploadOutlined,
+  },
   setup(props, { emit }) {
     const selectedKeys = ref(0);
     const toggleCollapse = () => {
